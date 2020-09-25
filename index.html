@@ -1,113 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" style="color: rgb(0, 0, 0); background-color: darkgrey;"">
+<html lang="en" style="color: rgb(36, 158, 5); background-color: rgb(0, 0, 0);"">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
-    <p> 
-        <br>&jfr; &ofr; &rfr; &dfr; &afr; &nfr; </br>
-        &wfr; &ifr; &nfr; &gfr; &ofr; &#128529; &#129393; &#9760;
 
-    </p>
-
-    <h1>text semantics</h1>
-    <p>Let's start with a quote:</p>
-    <blockquote>By default, <abbr tittle="hypertext markup language">HTML</html></abbr> is accessible, if used correctly.</blockquote>
-    <p><abbr title="casscading style sheet">CSS</abbr> can also be used to make web pages more, or less, accessible.</p>
-    Chemical Formulae:
-        <dl>
-        <dt>H<sub>2</sub>O</dt>
-        <dd>(Water),</dd> 
-        <dt>C<sub>2</sub>H<sub>6</sub>O 
-        <dd>(Ethanol).</dd>
-        </dl>
-    </p>
-
-    Dates:
-    <dl>December 25<sup>th</sup> 2019</dt>
-    <dd>(Christmas Day),
-    <dt>November 2<sub>nd</sub> 2019 </dt>
-    <dd>(Día de los Muertos).</dd>
-</dl>
-
-    <code>
-        <pre>
-    var para = document.querySelector('p'); 
-    para.onclick = function() { 
-            alert('Owww, stop poking me!'); 
-        }
-        </pre>
-    </code>
-    <p>
-        You shouldn't use presentational elements like <code>&lt;font&gt;</code> and 
-        <code>&lt;center&gt;</code>.<br>
-        In the above JavaScript example, <var>para</var> represents a paragraph element.<br>
-        Select all the text with <kbd>Ctrl</kbd><kbd>/</kbd><kbd>cmd</kbd> + <kbd>A</kbd>.
-    </p>
-    <code>
-        <pre>
-    $ ping mozilla.org 
-    PING mozilla.org (63.245.215.20): 56 data bytes 64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms
-        </pre>
-    </code>
-    
     <form action="data.json" method="POST">
         <fieldset>
-            <legend>medical qustionare</legend>
+            <legend>user information</legend>
        
                 <p>
-                    <label for="name"> jordan wingo </label>
-                    <input type="text" id="name" name="user name">
+                    
+                    <label for="name">user name</label>
+                    <input type="text" id="name" name="user name"><br>
+                    <label for="name">password</label>
+                    <input type="password" id="name" name="password">
+                    </fieldset>
                 </p>
 
                 <p>
-                    <label for ="medhist">please fill in you medical history</label><br>
-                    <textarea name="user.hist" id="medhist" cols="30" rows="10"></textarea>
+                    <fieldset>
+                    <legend>what drink do you want</legend>
                 </p>
+
                 <p>
-                    <button type="submit"> submit your medical qustion </button>
-                    <input type="reset" value="reset">
-                    <button disabled type="reset">reset</button>
-                   
+                    <input type="radio" id="drink1" name="drink" value="drink1">
+                    <label for="drink1">coke</label><br>
+
+                    <input type="radio" id="drink2" name="drink" value="drink2">
+                    <label for="drink2">diet coke</label><br>
+
+                    <input type="radio" id="drink3" name="drink" value="drink3">
+                    <label for="drink3">sprite</label><br>
+
+                    <input type="radio" id="drink4" name="drink" value="drink4">
+                    <label for="drink4"> water</label><br>
+                </fieldset>
+                <fieldset>
+                        <legend>pizza preference</legend>
+                    </p>
+    
+                    <p>
+                        <input type="radio" id="drink1" name="drink" value="drink1">
+                        <label for="drink1">plain</label><br>
+    
+                        <input type="radio" id="drink2" name="drink" value="drink2">
+                        <label for="drink2">pepperone</label><br>
+    
+                        <input type="radio" id="drink3" name="drink" value="drink3">
+                        <label for="drink3">chicken</label><br>
+    
+                        <input type="radio" id="drink4" name="drink" value="drink4">
+                        <label for="drink4"> sausage</label><br>
+                        </fieldset>
                 </p>
+                <fieldset>
+                    <legend>special instructions</legend>
+                </p>
+
                 <p>
-                    <lable for="images">please add a photo of your face</lable>
-                    <input type="file" name="myImage" accept=".jpeg, .jpg"/>
-                </p>
-                <p>
-                    <input type="checkbox" id="medical" name="medical" value="symptoms">
-                    <label for="medical"> I have a sore throat</label><br>
-
-                    <input type="checkbox" id="medical" name="medical" value="symptoms">
-                    <label for="medical"> I have a cough</label><br>
-
-                    <input type="checkbox" id="medical" name="medical" value="symptoms">
-                    <label for="medical"> I have am Sneezing</label><br>
-
-                    <input type="checkbox" id="medical" name="medical" value="symptoms">
-                    <label for="medical"> I have Slight body aches</label><br>
-                </p>
-                <p>
-                    <lable for="pw">please put your password</lable>
-                    Password: <input type="password" value="" id="myInput">
-                </p>
-                <p>
-                    <lable for="age">please select your age</lable><br>
-                    <input type="radio" id="age" name="age" value="age">
-                    <label for="age">0-12</label><br>
-
-                    <input type="radio" id="age" name="age" value="age">
-                    <label for="age">13-21</label><br>
-
-                    <input type="radio" id="age" name="age" value="age">
-                    <label for="age">21+</label><br>
-                </p>
+                    <label for ="medhist">special instructions</label><br>
+                    <textarea name="user.hist" id="medhist" cols="30" rows="10"></textarea><br>
+                    <input type="submit" value="submit">
+                    </fieldset>
 
 
-            </fieldset>
+
+            
 </form>
  
 </body>
